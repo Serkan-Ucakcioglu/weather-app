@@ -20,7 +20,7 @@ function HomeLogin() {
     if (key) {
       return navigate("/dashboard");
     }
-  }, [navigate, key, title,isError]);
+  }, [navigate, key, title, isError]);
 
   useEffect(() => {
     sessionStorage.getItem("login-key");

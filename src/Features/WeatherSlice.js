@@ -32,7 +32,7 @@ const weatherSlice = createSlice({
       .addCase(keyCheck.fulfilled, (state, action) => {
         state.isSuccess = true;
         state.isError = null;
-                return state;
+        return state;
       })
       .addCase(keyCheck.rejected, (state) => {
         state.isError = true;
@@ -40,7 +40,8 @@ const weatherSlice = createSlice({
       })
       .addCase(keyCheck.pending, (state) => {
         state.isFetching = true;
-        state.isSuccess = false;      });
+        state.isSuccess = false;
+      });
   },
 });
 
