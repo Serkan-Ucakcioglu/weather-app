@@ -40,9 +40,7 @@ const weatherSlice = createSlice({
       })
       .addCase(keyCheck.pending, (state) => {
         state.isFetching = true;
-        state.isSuccess = false;
-        state.isError = false;
-      });
+        state.isSuccess = false;      });
   },
 });
 
