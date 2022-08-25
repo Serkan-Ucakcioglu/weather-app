@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomeLogin from "./Pages/HomeLogin";
 import PrivateRoute from "./Components/PrivateRoute";
 import Dashboard from "./Pages/Dashboard";
+import CityDetail from "./Pages/CityDetail";
 
 function App() {
   return (
@@ -17,14 +18,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="/dashboard/:cityname"
-          element={
-            <PrivateRoute>
-              <Dashboard />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/dashboard/:cityname" element={<CityDetail />} />
       </Routes>
     </div>
   );

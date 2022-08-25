@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TurkeyCityList from "../TurkeyCityList";
+import { NavLink } from "react-router-dom";
 
 export default function Dashboard() {
   const [city, setCity] = useState("");
@@ -29,9 +30,9 @@ export default function Dashboard() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 ></path>
               </svg>
@@ -53,18 +54,17 @@ export default function Dashboard() {
             </button>
           </div>
         </form>
-        <ul className="grid grid-cols-3 gap-5 mg place-content-center w-full mt-32 mg">
+        <div className="grid grid-cols-3 gap-5 mg place-content-center w-full mt-32 mg">
           {TurkeyCityList.map((city) => {
             return (
-              <li
-                key={city.id}
-                class="focus:outline-none cursor-pointer text-center w-3/3 p-3 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
-              >
-                {city.name}
-              </li>
+              <NavLink to={`/dashboard/${city.name}`} key={city.id}>
+                <div class="focus:outline-none cursor-pointer text-center p-3 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                  {city.name}
+                </div>
+              </NavLink>
             );
           })}
-        </ul>
+        </div>
       </div>
     </div>
   );
