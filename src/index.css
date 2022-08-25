@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.ct{
+    max-width: 1200px;
+    width: 90%;
+}
+
+.mg{
+    margin: 35px auto;
+}
+
+.container{
+    max-width: 1250px;
+    width: 90%;
+    margin: 0px auto;
+}

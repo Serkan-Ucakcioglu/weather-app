@@ -17,6 +17,14 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/dashboard/:cityname"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );
