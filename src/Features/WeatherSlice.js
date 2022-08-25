@@ -31,6 +31,7 @@ const weatherSlice = createSlice({
     builder
       .addCase(keyCheck.fulfilled, (state, action) => {
         state.isSuccess = true;
+        state.isError = null;
                 return state;
       })
       .addCase(keyCheck.rejected, (state) => {
