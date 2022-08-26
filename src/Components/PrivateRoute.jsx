@@ -8,7 +8,6 @@ export default function PrivateRoute({ children }) {
   useEffect(() => {}, [key]);
 
   if (!key) {
-    console.log("askads");
     return navigate("/");
   }
 
