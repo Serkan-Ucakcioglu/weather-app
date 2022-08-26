@@ -13,7 +13,7 @@ function CityDetail() {
     )
       .then((res) => res.json())
       .then((dat) => setData(dat));
-  }, []);
+  }, [cityname]);
 
   return (
     <div>
