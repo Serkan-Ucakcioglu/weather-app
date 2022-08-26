@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 export const keyCheck = createAsyncThunk(
   "auth/login",
@@ -9,6 +10,8 @@ export const keyCheck = createAsyncThunk(
       );
       if (response.status === 200) {
         sessionStorage.setItem("login-key", key);
+      } else {
+        toast.error("Api Key Hatalı..");
       }
     } catch (e) {
       thunkAPI.rejectWithValue(e.response.data);

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { keyCheck } from "../Features/WeatherSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function HomeLogin() {
   const [title, setTitle] = useState("");
@@ -28,6 +30,18 @@ function HomeLogin() {
 
   return (
     <div className="bg-slate-900	flex flex-col justify-center items-center h-screen">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />{" "}
+      {toast}
       <div className="mb-36 flex items-center">
         <input
           type="search"
@@ -48,11 +62,6 @@ function HomeLogin() {
           </button>
         )}
       </div>
-      {isError === false && (
-        <div className="text-white flex justify-center bg-red-500 p-4 rounded-lg">
-          Yanlış Api Key , Lütfen Kontrol Ediniz..
-        </div>
-      )}
     </div>
   );
 }

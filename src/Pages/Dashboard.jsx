@@ -14,7 +14,7 @@ export default function Dashboard() {
       <div className="container flex flex-col items-center">
         <form onSubmit={search} className="w-2/3 mt-36">
           <label
-            for="default-search"
+            htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
           >
             Search
@@ -58,7 +58,7 @@ export default function Dashboard() {
           {TurkeyCityList.map((city) => {
             return (
               <NavLink to={`/dashboard/${city.name}`} key={city.id}>
-                <div class="focus:outline-none cursor-pointer text-center p-3 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                <div className="focus:outline-none cursor-pointer text-center p-3 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
                   {city.name}
                 </div>
               </NavLink>
