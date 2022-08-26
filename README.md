@@ -5,6 +5,9 @@ In the project directory, you can run:
 ### `npm start`
 ### Api key : 06c98d059eb32f76e22c6d0c9b72726b
 
+### Performance 
+![image](https://user-images.githubusercontent.com/98692987/186891698-7ef0870e-eb80-461e-b1f1-d2ad041a3bfb.png)
+
 ### LOGİN PAGE
 ![image](https://user-images.githubusercontent.com/98692987/186891169-402b0d75-5510-4b54-8a3e-cb8cd109b3de.png)
 
