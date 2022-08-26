@@ -4,7 +4,6 @@ import { NavLink, useParams } from "react-router-dom";
 function CityDetail() {
   const { cityname } = useParams();
   const [data, setData] = useState([]);
-  const [week, setWeek] = useState([]);
   const today = new Date();
   const date = String(today);
 
