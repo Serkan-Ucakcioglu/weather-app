@@ -15,8 +15,7 @@ In the project directory, you can run:
 ![image](https://user-images.githubusercontent.com/98692987/186891232-e8672ef6-572d-4b89-bc4e-5038b3a3df48.png)
 
 ### Dasboard
-![image](https://user-images.githubusercontent.com/98692987/186891294-6e1abac1-5701-4d26-8d24-d5fae70f1ba4.png)
-
+![image](https://user-images.githubusercontent.com/98692987/186891886-56e39009-209b-4f52-a121-d7c6bf5b4548.png)
 
 ### Detail
 ![image](https://user-images.githubusercontent.com/98692987/186891334-2b0fdb70-f1ce-4f70-9504-74dad2fa772e.png)
