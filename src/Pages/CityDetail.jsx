@@ -4,10 +4,9 @@ import { NavLink, useParams } from "react-router-dom";
 function CityDetail() {
   const { cityname } = useParams();
   const [data, setData] = useState([]);
+  const [week, setWeek] = useState([]);
   const today = new Date();
   const date = String(today);
-
-  console.log("as", cityname);
 
   useEffect(() => {
     fetch(
@@ -16,7 +15,6 @@ function CityDetail() {
       .then((res) => res.json())
       .then((dat) => setData(dat));
   }, []);
-  console.log(data);
 
   return (
     <div>
