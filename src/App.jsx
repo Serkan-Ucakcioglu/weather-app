@@ -18,7 +18,11 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/:cityname" element={<CityDetail />} />
+        <Route path="/:cityname"  element={
+            <PrivateRoute>
+              <CityDetail />
+            </PrivateRoute>
+          } />
       </Routes>
     </div>
   );
