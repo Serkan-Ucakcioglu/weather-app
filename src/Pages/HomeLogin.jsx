@@ -50,9 +50,9 @@ function HomeLogin() {
           placeholder="Api Key"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          onKeyPress={(e ) => {
+          onKeyPress={(e) => {
             if (e.key === "Enter") {
-              check()
+              check();
             }
           }}
           required
