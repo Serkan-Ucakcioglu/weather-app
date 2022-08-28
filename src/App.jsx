@@ -18,7 +18,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/:cityname"  element={
+        <Route path="/city/:cityname"  element={
             <PrivateRoute>
               <CityDetail />
             </PrivateRoute>

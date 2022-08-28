@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import TurkeyCityList from "../TurkeyCityList";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
   const [city, setCity] = useState("");
 
+  const navigate = useNavigate();
+
   const search = (e) => {
     e.preventDefault();
+  };
+  const citySearch = () => {
+    navigate(`/city/${city}`);
   };
 
   return (
@@ -44,10 +49,15 @@ export default function Dashboard() {
               onChange={(e) => setCity(e.target.value)}
               className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search City.."
+              onKeyPress={(e) => {
+                if (e.key === "Enter") {
+                  citySearch(city);
+                }
+              }}
               required
             />
             <NavLink
-              to={`/${city}`}
+              to={`/city/${city}`}
               type="submit"
               className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
@@ -58,12 +68,12 @@ export default function Dashboard() {
         <div className="grid grid-cols-3 gap-5 mg place-content-center w-full mt-32 mg">
           {TurkeyCityList.map((city) => {
             return (
-              <NavLink to={`/${city.name.toLowerCase()}`}>
+              <NavLink to={`/city/${city.name.toLowerCase()}`}>
                 <div
                   key={city.name}
                   className="focus:outline-none  cursor-pointer text-center p-3 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
                 >
-                {city.name}
+                  {city.name}
                 </div>
               </NavLink>
             );
